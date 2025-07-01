@@ -1,20 +1,153 @@
+/* Reset sencillo */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    font-family:  Arial, Helvetica, sans-serif ;    
-    text-align: center;
-    background-color: aqua;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.6)
+    ),
+    url('fondo.jpg') no-repeat center center fixed;
+  background-size: cover;
+  height: 100vh;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
 }
 
-.perfil {
-    background-color: black;
-    padding: 30px;
-    border-radius: 15px;
-    width: 300px;
-    margin: auto;
-    box-shadow: o o 15px rgba(red, green, blue, alpha);
+.container {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.7);
+  padding: 40px 50px;
+  max-width: 380px;
+  text-align: center;
+  backdrop-filter: blur(8px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-img {
-width: 150px;
-border-radius: 50%;
-margin-top: 15px;
+.container:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.85);
+}
+
+.profile-img {
+  width: 250px;   /* antes 220px */
+  height: 250px;  /* antes 220px */
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #fff;
+  box-shadow: 0 0 25px #00bfff;
+  animation: pulseGlow 3s infinite alternate;
+}
+
+
+@keyframes pulseGlow {
+  0% {
+    box-shadow: 0 0 15px #00bfff;
+  }
+  100% {
+    box-shadow: 0 0 35px #00e5ff;
+  }
+}
+
+h1 {
+  margin-top: 25px;
+  font-weight: 600;
+  font-size: 2.6rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.age {
+  margin-top: 10px;
+  font-size: 1.3rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+  color: #cce7ff;
+}
+
+.socials {
+  margin-top: 35px;
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+}
+
+.socials a {
+  color: #fff;
+  font-size: 1.8rem;
+  transition: color 0.35s ease;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  background-color: rgba(255, 255, 255, 0.15);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+.socials a:hover {
+  color: #00e5ff;
+  background-color: rgba(0, 229, 255, 0.3);
+  box-shadow: 0 0 20px #00e5ff;
+  transform: scale(1.1);
+  transition: all 0.3s ease;
+}
+
+/* Responsividad */
+@media (max-width: 420px) {
+  .container {
+    padding: 30px 25px;
+    max-width: 90vw;
+  }
+
+  .profile-img {
+    width: 180px;
+    height: 180px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .age {
+    font-size: 1.1rem;
+  }
+
+  .socials a {
+    width: 45px;
+    height: 45px;
+    font-size: 1.5rem;
+    line-height: 45px;
+  }
+}
+
+.btn-instagram {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 12px 28px;
+  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+  color: white;
+  font-weight: 600;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 30px;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(204, 24, 136, 0.6);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.btn-instagram:hover {
+  box-shadow: 0 6px 25px rgba(204, 24, 136, 0.9);
+  transform: scale(1.05);
 }
