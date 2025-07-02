@@ -1,0 +1,45 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  background-color: #fafafa;
+}
+
+header {
+  background-color: #0d47a1;
+  color: white;
+  text-align: center;
+  padding: 30px 0;
+}
+
+main {
+  padding: 20px;
+}
+
+.sobre-mi, .hobbies {
+  margin: 20px auto;
+  max-width: 600px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.sobre-mi img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  display: block;
+  margin: 10px auto;
+}
+
+footer {
+  background-color: #eeeeee;
+  text-align: center;
+  padding: 15px;
+}
+
+footer a {
+  text-decoration: none;
+  margin: 0 10px;
+  color: #0d47a1;
+}
