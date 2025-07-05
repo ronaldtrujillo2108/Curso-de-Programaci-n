@@ -18,6 +18,15 @@ const NUMBERS = [
 for (let index = 0; index < OTHERS_OP.length; index++) {
     const button = document.createElement("button");
     button.innerText = OTHERS_OP[index];
-    othersOp.appendChild[button];
+    othersOp.appendChild(button);
+    if (index == 2 || index == 3) {button.classList.add("hidden");}
+}
+
+for (let index = 0; index < NUMBERS.length; index++) {
+    const button = document.createElement("button");
+    button.innerText = NUMBERS[index];
+    numbers.appendChild(button);
+    if (NUMBERS[index].includes("DEL") || NUMBERS[index].includes("AC")) {button.classList.add("color")}
+        
     
 }
