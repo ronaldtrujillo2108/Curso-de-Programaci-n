@@ -1,18 +1,96 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Website</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FitΩS2108 | Portafolio</title>
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
 </head>
 <body>
-    <header>
-        <a href="#" class="active">Home</a>
-        <a href="#">Services</a>
-        <a href="#">Skill</a>
-        <a href="#">Project</a>
-        
-    </header>
+  <video autoplay loop muted playsinline class="back-vid">
+    <source src="images/red_plate.mov" type="video/mp4" />
+  </video>
+
+  <section class="main-section">
+    <nav>
+      <h1 data-aos="zoom-in" data-aos-duration="1000">
+        <span style="color: #f40000;">Fit</span>ΩS2108
+      </h1>
+      <ul>
+        <li><a class="active" href="#">Inicio</a></li>
+        <li><a href="#">Sobre mí</a></li>
+        <li><a href="#">Proyectos</a></li>
+        <li><a href="#">Habilidades</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+      <div class="toggle-mode" id="mode-icon">
+        <i class='bx bx-moon'></i>
+      </div>
+    </nav>
+
+    <div class="hero">
+      <div class="hero-info">
+        <h1 data-aos="fade-right" data-aos-duration="1000" data-aos-delay="700">
+          ¡Hola! Soy FitΩS2108
+        </h1>
+        <h2 data-aos="fade-left" data-aos-duration="1000" data-aos-delay="900">
+          Desarrollador Web
+        </h2>
+        <p data-aos="flip-down" data-aos-duration="1000" data-aos-delay="1000">
+          Me apasiona transformar ideas en soluciones funcionales. En este espacio comparto mi experiencia construyendo herramientas digitales enfocadas en el diseño limpio, la funcionalidad y el rendimiento.
+        </p>
+
+        <div class="Buttons">
+          <button class="btn" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="1100">
+            Escríbeme
+          </button>
+          <ul class="ul-icons">
+            <li><a href="#" title="GitHub"><i class='bx bxl-github'></i></a></li>
+            <li><a href="#" title="Twitter"><i class='bx bxl-twitter'></i></a></li>
+            <li><a href="#" title="YouTube"><i class='bx bxl-youtube'></i></a></li>
+            <li><a href="#" title="Facebook"><i class='bx bxl-facebook-circle'></i></a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="hero-img" data-aos="zoom-in-left" data-aos-duration="2500">
+        <img src="images/man1.png" alt="Imagen de perfil de FitΩS2108" />
+      </div>
+    </div>
+
+    <div class="info-sec">
+      <div class="info-card" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="1600">
+        <h1>4+</h1>
+        <p>Años de <br> experiencia</p>
+      </div>
+      <div class="info-card" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="1700">
+        <h1>7+</h1>
+        <p>Tecnologías <br> dominadas</p>
+      </div>
+      <div class="info-card" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="1800">
+        <h1>50+</h1>
+        <p>Proyectos <br> entregados</p>
+      </div>
+      <div class="info-card" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="1900">
+        <h1>80+</h1>
+        <p>Clientes <br> satisfechos</p>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+
+    const toggle = document.getElementById("mode-icon");
+    toggle.addEventListener("click", () => {
+      document.body.classList.toggle("dark-mode");
+      toggle.innerHTML = document.body.classList.contains("dark-mode")
+        ? "<i class='bx bx-sun'></i>"
+        : "<i class='bx bx-moon'></i>";
+    });
+  </script>
 </body>
 </html>
