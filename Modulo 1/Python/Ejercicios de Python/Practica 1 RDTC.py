@@ -28,7 +28,8 @@ Edad = input("Cuantos años tienes")
 print(f"Tu edad es {Edad}")
 
 #Ejercicio 7
-
+Mascota=input("Ingresa el nombtre de tu Mascota")
+print(f"tu mascota se llama {Mascota}")
 
 #Ejercicio 8
 numero1 = 3
